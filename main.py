@@ -100,7 +100,7 @@ while not client.apagado:
         "Dioxido de Carbono": random.randint(0, 80)
     }
     serial = json.dumps(datos)
-    client.publish("v1/devices/me/telemetry", serial, qos=1)
+    client.publish(topic_telemetry, serial, qos=1)
     time.sleep(5)
 
 # Una vez que se apaga el sistema a traves de la interfaz
